@@ -46,7 +46,8 @@ void loop() {
 	if (Serial.available() > 0) {
 		String command = Serial.readStringUntil(';') + ",-1,";
 
-		if (command == "a,-1,") {
+    if(command == "status,-1,"){}
+		else if (command == "a,-1,") {
 			mode = 1;
 		}
 		else if (command == "b,-1,") {
@@ -65,11 +66,9 @@ void loop() {
 			short state = command.substring(split_idx + 1, next_split_idx).toInt();
 
 			if (device_id < num_toggle) {
-				Serial.println("a");
-				digitalWrite(2, HIGH);
+				digitalWrite(device_id + 2, HIGH);
 				delay(50);
-				Serial.println("a");
-				digitalWrite( 2, LOW);
+				digitalWrite(device_id + 2, LOW);
 			}
 			else {
 				if (state == -1) {
