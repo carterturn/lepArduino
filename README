@@ -1,5 +1,2 @@
-lepArduino
-==========
-
-This is the Arduino code for interfacing with the LEP home automation system.
-Be sure to "chown user /dev/.../ " before attempting to run LEP server not as root (we recommend you do this).
+THIS REPOSITORY IS DEPRECATED.
+THE NEW VERSION CAN BE FOUND AT https://gitlab.com/carterturn/lepArduino
